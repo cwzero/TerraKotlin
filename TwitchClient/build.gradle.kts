@@ -9,8 +9,6 @@ dependencies {
     implementation("io.github.openfeign:feign-jaxrs2:11.0")
     testImplementation("io.github.openfeign:feign-mock:11.0")
 
-    implementation("org.slf4j:slf4j-simple:1.7.30")
-
     implementation("com.fasterxml.jackson.core:jackson-databind:2.12.1")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.12.1")
 
