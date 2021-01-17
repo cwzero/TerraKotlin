@@ -1,6 +1,6 @@
 package com.liquidforte.terra.twitch.model.addonsearch
 
-import com.liquidforte.terra.twitch.model.latestfile.LatestFile
+import com.liquidforte.terra.twitch.model.file.File
 import java.util.*
 
 data class AddonSearchResult(
@@ -30,7 +30,7 @@ data class AddonSearchResult(
 ) {
     val authors: MutableList<AddonAuthor> = mutableListOf()
     val attachments: MutableList<AddonAttachment> = mutableListOf()
-    val latestFiles: MutableList<LatestFile> = mutableListOf()
+    val files: MutableList<File> = mutableListOf()
     val categories: MutableList<AddonSearchCategory> = mutableListOf()
     val gameVersionLatestFiles: MutableList<GameVersionLatestFile> = mutableListOf()
 }

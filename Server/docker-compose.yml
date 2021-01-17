@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  web:
+    image: "liquidforte/terra/server:latest"
+    ports:
+      - "8080:8080"
+  postgres:
+    image: "postgres:13.1"
+    restart: always
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: terra
+volumes:
+  postgres_data:

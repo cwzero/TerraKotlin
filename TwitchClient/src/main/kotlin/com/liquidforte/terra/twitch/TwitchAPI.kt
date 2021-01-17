@@ -1,10 +1,9 @@
 package com.liquidforte.terra.twitch
 
-import com.liquidforte.terra.twitch.model.fingerprint.FingerprintMatch
 import com.liquidforte.terra.twitch.model.addonsearch.AddonSearchRequest
 import com.liquidforte.terra.twitch.model.addonsearch.AddonSearchResult
 import com.liquidforte.terra.twitch.model.fingerprint.FingerprintResult
-import com.liquidforte.terra.twitch.model.latestfile.LatestFile
+import com.liquidforte.terra.twitch.model.file.File
 import feign.Headers
 import feign.Param
 import feign.RequestLine
@@ -14,10 +13,10 @@ interface TwitchAPI {
     fun getAddon(@Param("addonId") id: Long): AddonSearchResult
 
     @RequestLine("GET /addon/{addonId}/file/{fileId}")
-    fun getFile(@Param("addonId") addonId: Long, @Param("fileId") fileId: Long): LatestFile
+    fun getFile(@Param("addonId") addonId: Long, @Param("fileId") fileId: Long): File
 
     @RequestLine("GET /addon/{addonId}/files")
-    fun getFiles(@Param("addonId") addonId: Long): List<LatestFile>
+    fun getFiles(@Param("addonId") addonId: Long): List<File>
 
     @RequestLine("GET /addon/search?categoryId={categoryId}&gameId={gameId}&gameVersion={gameVersion}&index={index}&pageSize={pageSize}&searchFilter={searchFilter}&sectionId={sectionId}&sort={sort}")
     fun addonSearch(

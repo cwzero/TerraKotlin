@@ -9,6 +9,9 @@ dependencies {
     api(project(":TwitchClient"))
 
     implementation("io.dropwizard:dropwizard-core:2.0.18")
+    implementation("io.dropwizard:dropwizard-db:2.0.18")
+    implementation("io.dropwizard:dropwizard-jdbi3:2.0.18")
+
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.12.1")
 }
 

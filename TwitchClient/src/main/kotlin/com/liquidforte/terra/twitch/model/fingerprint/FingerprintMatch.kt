@@ -1,10 +1,10 @@
 package com.liquidforte.terra.twitch.model.fingerprint
 
-import com.liquidforte.terra.twitch.model.latestfile.LatestFile
+import com.liquidforte.terra.twitch.model.file.File
 
 data class FingerprintMatch(
     val id: Long,
-    val file: LatestFile
+    val file: File
 ) {
-    val latestFiles: MutableList<LatestFile> = mutableListOf()
+    val files: MutableList<File> = mutableListOf()
 }

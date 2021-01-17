@@ -1,4 +1,4 @@
-package com.liquidforte.terra.twitch.model.latestfile
+package com.liquidforte.terra.twitch.model.file
 
 import java.util.*
 

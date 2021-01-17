@@ -1,8 +1,8 @@
-package com.liquidforte.terra.twitch.model.latestfile
+package com.liquidforte.terra.twitch.model.file
 
 import java.util.*
 
-data class LatestFile(
+data class File(
     val id: Long,
     val displayName: String,
     val fileName: String,
@@ -29,7 +29,7 @@ data class LatestFile(
     val gameId: Long,
     val isServerPack: Boolean,
 ) {
-    val dependencies: MutableList<LatestFileDependency> = mutableListOf()
-    val modules: MutableList<LatestFileModule> = mutableListOf()
+    val dependencies: MutableList<FileDependency> = mutableListOf()
+    val modules: MutableList<FileModule> = mutableListOf()
     val sortableGameVersions: MutableList<SortableGameVersion> = mutableListOf()
 }

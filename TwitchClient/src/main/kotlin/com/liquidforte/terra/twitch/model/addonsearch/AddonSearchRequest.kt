@@ -3,14 +3,14 @@ package com.liquidforte.terra.twitch.model.addonsearch
 import com.liquidforte.terra.twitch.config.TwitchConfig
 
 data class AddonSearchRequest(
-    val categoryId: Long,
-    val gameId: Long,
-    val gameVersion: String,
-    val index: Long,
-    val pageSize: Long,
-    val searchFilter: String,
-    val sectionId: Long,
-    val sort: Long
+    var categoryId: Long = 0,
+    var gameId: Long = 432,
+    var gameVersion: String = "1.16.4",
+    var index: Long = 0,
+    var pageSize: Long = 1000,
+    var searchFilter: String = "",
+    var sectionId: Long = 6,
+    var sort: Long = 5
 ) {
     constructor(config: TwitchConfig, categoryId: Long, index: Long, searchFilter: String, sectionId: Long) : this(
         categoryId,
